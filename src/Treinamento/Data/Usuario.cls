@@ -9,8 +9,7 @@ Property Sexo As %String [ SqlColumnNumber = 4 ];
 
 Property Email As %String [ SqlColumnNumber = 5 ];
 
-/// Description: Relacionamento com Perfil
-Relationship RelationshipName As Treinamento.Data.Perfil [ Cardinality = one, Inverse = Usuario ];
+Relationship Perfil As Treinamento.Data.Perfil [ Cardinality = one, Inverse = Usuarios ];
 
 Storage Default
 {
@@ -32,6 +31,9 @@ Storage Default
 </Value>
 <Value name="6">
 <Value>RelationshipName</Value>
+</Value>
+<Value name="7">
+<Value>Perfil</Value>
 </Value>
 </Data>
 <DataLocation>^Treinamento.Data.UsuarioD</DataLocation>

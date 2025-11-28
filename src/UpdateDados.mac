@@ -1,0 +1,80 @@
+ROUTINE UpdateDados
+UpdateDados
+Execute
+    Kill ^Treinamento.Data.NivelD
+    Kill ^Treinamento.Data.PerfilD
+    Kill ^Treinamento.Data.UsuarioD
+
+    set nivel1 = ##class(Treinamento.Data.Nivel).%New()
+    set nivel1.NomeNivel = "Acesso Total"
+    set nivel1.Codigo = "AT"
+    set sc = nivel1.%Save()
+    if sc<1 { WRITE "Erro salvando nivel1",! QUIT }
+
+    set nivel2 = ##class(Treinamento.Data.Nivel).%New()
+    set nivel2.NomeNivel = "Acesso Gerente"
+    set nivel2.Codigo = "AG"
+    set sc = nivel2.%Save()
+    if sc<1 { WRITE "Erro salvando nivel2",! QUIT }
+
+    set nivel3 = ##class(Treinamento.Data.Nivel).%New()
+    set nivel3.NomeNivel = "Acesso Coordenador"
+    set nivel3.Codigo = "AC"
+    set sc = nivel3.%Save()
+    if sc<1 { WRITE "Erro salvando nivel3",! QUIT }
+
+    WRITE "Níveis criados.",!!
+
+    set perfil1 = ##class(Treinamento.Data.Perfil).%New()
+    set perfil1.NomePerfil = "Diretor"
+    set perfil1.Codigo = "DIR"
+    set perfil1.Nivel = nivel1
+    set sc = perfil1.%Save()
+    if sc<1 { WRITE "Erro salvando perfil1",! QUIT }
+
+    set perfil2 = ##class(Treinamento.Data.Perfil).%New()
+    set perfil2.NomePerfil = "Gerente"
+    set perfil2.Codigo = "GER"
+    set perfil2.Nivel = nivel2
+    set sc = perfil2.%Save()
+    if sc<1 { WRITE "Erro salvando perfil2",! QUIT }
+
+    set perfil3 = ##class(Treinamento.Data.Perfil).%New()
+    set perfil3.NomePerfil = "Coordenador"
+    set perfil3.Codigo = "COO"
+    set perfil3.Nivel = nivel3
+    set sc = perfil3.%Save()
+    if sc<1 { WRITE "Erro salvando perfil3",! QUIT }
+
+    WRITE "Perfis criados.",!!
+
+    set usuario1 = ##class(Treinamento.Data.Usuario).%New()
+    set usuario1.Nome = "Jean"
+    set usuario1.SobreNome = "Guilherme"
+    set usuario1.Sexo = "M"
+    set usuario1.Email = "jean.guilherme@example.com"
+    set usuario1.Perfil = perfil1
+    set sc = usuario1.%Save()
+    if sc<1 { WRITE "Erro salvando usuario1",! QUIT }
+
+    set usuario2 = ##class(Treinamento.Data.Usuario).%New()
+    set usuario2.Nome = "Maria"
+    set usuario2.SobreNome = "Silva"
+    set usuario2.Sexo = "F"
+    set usuario2.Email = "maria.silva@example.com"
+    set usuario2.Perfil = perfil2
+    set sc = usuario2.%Save()
+    if sc<1 { WRITE "Erro salvando usuario2",! QUIT }
+
+    set usuario3 = ##class(Treinamento.Data.Usuario).%New()
+    set usuario3.Nome = "Ana"
+    set usuario3.SobreNome = "Souza"
+    set usuario3.Sexo = "F"
+    set usuario3.Email = "ana.souza@example.com"
+    set usuario3.Perfil = perfil3
+    set sc = usuario3.%Save()
+    if sc<1 { WRITE "Erro salvando usuario3",! QUIT }
+
+    WRITE "Usuários criados.",!!
+
+    QUIT
