@@ -1,16 +1,10 @@
 ROUTINE UpdateDados
 UpdateDados
-Seed
+Execute
     Kill ^Treinamento.Data.NivelD
     Kill ^Treinamento.Data.PerfilD
     Kill ^Treinamento.Data.UsuarioD
 
-    NEW nivel1,nivel2,nivel3
-    NEW perfil1,perfil2,perfil3
-    NEW usuario1,usuario2,usuario3
-    NEW sc
-
-    ; --- CRIAR NÍVEIS ---
     set nivel1 = ##class(Treinamento.Data.Nivel).%New()
     set nivel1.NomeNivel = "Acesso Total"
     set nivel1.Codigo = "AT"
@@ -31,7 +25,6 @@ Seed
 
     WRITE "Níveis criados.",!!
 
-    ; --- CRIAR PERFIS ---
     set perfil1 = ##class(Treinamento.Data.Perfil).%New()
     set perfil1.NomePerfil = "Diretor"
     set perfil1.Codigo = "DIR"
@@ -55,7 +48,6 @@ Seed
 
     WRITE "Perfis criados.",!!
 
-    ; --- CRIAR USUÁRIOS ---
     set usuario1 = ##class(Treinamento.Data.Usuario).%New()
     set usuario1.Nome = "Jean"
     set usuario1.SobreNome = "Guilherme"
