@@ -1,0 +1,8 @@
+ROUTINE LogMensagemRotine
+LogMensagemRotine
+#;Kill ^Treinamento.Data.LogMensagemD
+ 
+ Set retorno = ##class(Treinamento.Data.LogMensagem).CriarEntrada("LogMensagemRotine","Teste de mensagem de log")
+ Set logId = retorno.%Id()
+ Set encerrando = ##class(Treinamento.Data.LogMensagem).Finalizar(logId,"Processo finalizado com sucesso",0)
+ Set LogMensagemStatus = ##class(Treinamento.Data.LogMensagem).ConsultaLog(1,"","")

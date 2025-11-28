@@ -1,0 +1,18 @@
+ROUTINE exercicio4
+EXERCICIO4
+ WRITE !,"Cadastro de Aluno",!
+
+ READ "Digite a matrícula: ", Matricula,!
+ READ "Digite o nome completo: ", Nome,!
+ READ "Digite o telefone: ", Telefone,!
+ READ "Digite a data de nascimento (DD/MM/AAAA): ", DataNasc,!
+ READ "Digite o sexo (M/F): ", Sexo,!
+
+ WRITE !!,"Dados Cadastrados",!
+ WRITE "Matrícula: ", Matricula,!
+ WRITE "Nome Completo: ", Nome,!
+ WRITE "Telefone: ", Telefone,!
+ WRITE "Data de Nascimento: ", DataNasc,!
+ WRITE "Sexo: ", Sexo,!
+
+ QUIT ;

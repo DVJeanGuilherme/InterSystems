@@ -1,0 +1,5 @@
+ROUTINE InvokeRoutine
+InvokeRoutine 
+ WRITE " Invocando a rotina exercicio1...",!
+ DO ^exercicio1(10,20)
+ QUIT

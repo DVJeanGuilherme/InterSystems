@@ -1,0 +1,7 @@
+ROUTINE exercicio6
+EXERCICIO6 
+ READ "Digite a data no formato DD/MM/AAAA: ",DataEU,!!
+ WRITE $ZDATEH(DataEU, 4),!!
+ WRITE $ZDATE($ZDATEH(DataEU, 4),18),!!
+ WRITE $PIECE($ZDATE($ZDATEH(DataEU, 4),18)," ",2),!
+ QUIT ; 

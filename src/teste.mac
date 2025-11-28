@@ -1,0 +1,4 @@
+ROUTINE teste
+TESTE
+ Set teste = "Olá Mundo!"
+ Write teste

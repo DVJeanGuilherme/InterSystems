@@ -1,0 +1,14 @@
+ROUTINE exercicio1
+EXERCICIO1
+ READ "Digite o valor de x: ", x,!
+ READ "Digite o valor de y: ", y,!
+
+ WRITE !,"Números pares entre ",x," e ",y,":",!    
+    
+ FOR a=(x+1):1:(y-1)
+  {
+    IF a # 2 = 0 {
+            WRITE a, ", "
+   	}
+   }
+ QUIT ;

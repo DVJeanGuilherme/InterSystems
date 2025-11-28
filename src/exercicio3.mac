@@ -1,0 +1,39 @@
+ROUTINE exercicio3
+EXERCICIO3
+ READ "Digite o valor de num1: ", num1,!
+ READ "Digite o valor de num2: ", num2,!
+ READ "Digite o valor de num3: ", num3,!
+      
+ SET t11=0
+ SET t3=0
+ SET total=0
+ 
+ WRITE !!,"Números divididos por 11 com resto 5 entre ",num1," a ",num2,":",!   
+ FOR a=(num1+1):1:(num2-1)
+  { 
+    IF a # 11 = 5 { 
+	   SET t11 = t11+1
+	   WRITE a, ", " 
+  }
+   }
+ WRITE !,"Total de: ", t11
+ 
+ 
+ WRITE !!,"Números múltiplos de 3 entre ",num2," a ",num3,":",!
+ FOR b=(num2+1):1:(num3-1)
+  {
+    IF b # 3 = 0 {
+	   SET t3 = t3+1
+	   WRITE b, ", "  
+  }
+   }
+ WRITE !,"Total de: ", t3
+ 
+ 
+ FOR c=(num1+1):1:(num2-1)
+  { 
+    SET soma = soma+c
+  }      
+ WRITE !!,"A soma dos números entre ",num1," a ",num2,": ",soma,!
+   
+ QUIT ;

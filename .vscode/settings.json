@@ -1,0 +1,8 @@
+{
+    "objectscript.conn": {
+        "active": true,
+        "server": "iris",
+        "ns": "TREINAMENTO"
+    },
+    "workbench.colorTheme": "InterSystems Default Dark Modern"
+}

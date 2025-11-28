@@ -1,0 +1,25 @@
+ROUTINE exercicio5
+EXERCICIO5
+ WRITE !,"Cadastro de Alunos",!
+
+ READ "Quantos alunos deseja cadastrar? ", Qtde,!
+
+ FOR a=1:1:Qtde {
+    WRITE !!,"Aluno: ",a,!
+
+    READ "Matrícula: ", Matricula,!
+    READ "Nome Completo: ", Nome,!
+    READ "Telefone: ", Telefone,!
+    READ "Data de Nascimento (DD/MM/AAAA): ", DataNasc,!
+    READ "Sexo (M/F): ", Sexo,!
+
+    SET ^tAluno(a,"matricula") = Matricula
+    SET ^tAluno(a,"nome")      = Nome
+    SET ^tAluno(a,"telefone")  = Telefone
+    SET ^tAluno(a,"nascimento") = DataNasc
+    SET ^tAluno(a,"sexo")      = Sexo
+
+    }
+
+    WRITE !!,"Cadastro concluído!",!!
+    QUIT ;
