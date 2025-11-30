@@ -5,7 +5,7 @@ Property NomePerfil As %String [ SqlColumnNumber = 2 ];
 
 Property Codigo As %String [ SqlColumnNumber = 3 ];
 
-Relationship Usuarios As Treinamento.Data.Usuario [ Cardinality = many, Inverse = Perfil ];
+Relationship Usuarios As list Of Treinamento.Data.Usuario [ Cardinality = many, Inverse = Perfil ];
 
 Relationship Nivel As Treinamento.Data.Nivel [ Cardinality = one, Inverse = Perfis ];
 
