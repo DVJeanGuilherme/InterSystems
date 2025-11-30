@@ -5,6 +5,8 @@ Property NomeNivel As %String [ SqlColumnNumber = 2 ];
 
 Property Codigo As %String [ SqlColumnNumber = 3 ];
 
+Relationship Perfis As list Of Treinamento.Data.Perfil [ Cardinality = many, Inverse = Nivel ];
+
 Storage Default
 {
 <Data name="NivelDefaultData">
@@ -16,6 +18,9 @@ Storage Default
 </Value>
 <Value name="3">
 <Value>Codigo</Value>
+</Value>
+<Value name="4">
+<Value>Perfil</Value>
 </Value>
 </Data>
 <DataLocation>^Treinamento.Data.NivelD</DataLocation>
